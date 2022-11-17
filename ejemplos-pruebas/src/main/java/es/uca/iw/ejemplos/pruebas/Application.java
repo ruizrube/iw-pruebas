@@ -10,7 +10,6 @@ import com.vaadin.flow.component.dependency.NpmPackage;
 import com.vaadin.flow.component.page.AppShellConfigurator;
 import com.vaadin.flow.component.page.Push;
 import com.vaadin.flow.server.PWA;
-import com.vaadin.flow.theme.Theme;
 
 /**
  * The entry point of the Spring Boot application.
@@ -27,7 +26,9 @@ import com.vaadin.flow.theme.Theme;
 @Push
 public class Application extends SpringBootServletInitializer implements AppShellConfigurator  {
 
-    public static void main(String[] args) {
+    private static final long serialVersionUID = -5075137054339641340L;
+
+	public static void main(String[] args) {
         LaunchUtil.launchBrowserInDevelopmentMode(SpringApplication.run(Application.class, args));
     }
     

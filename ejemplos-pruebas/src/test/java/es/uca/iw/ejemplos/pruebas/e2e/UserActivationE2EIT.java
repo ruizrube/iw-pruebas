@@ -16,9 +16,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
-
 import es.uca.iw.ejemplos.pruebas.ObjectMother;
 import es.uca.iw.ejemplos.pruebas.user.User;
 import es.uca.iw.ejemplos.pruebas.user.UserService;
@@ -31,7 +28,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 //La etiqueta @Transactional no funciona con selenium y hay que restaurar manualmente el estado de la BD
-public class UserActivationE2ETest {
+public class UserActivationE2EIT {
 
 	@LocalServerPort
 	private int port;
